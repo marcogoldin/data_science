@@ -27,12 +27,13 @@
 <!-- ************************************************ -->
 
 <body>
-	<div>
-		<h3 style="text-align: center;font-family: Helvetica Neue;opacity: 0.5;">Prova</h3>
+	<div style="margin-bottom: 2em">
+		<h3 style="text-align: center;font-family: Helvetica Neue;opacity: 0.5;margin: 1em">Grafo di conoscenza bibliografico</h3>
+		
 	</div>
 	
 	<!-- container -->
-    <div id="cy"></div>
+    <div id="cy" style="padding-top: 2em"></div>
 
     <script>
 
@@ -40,57 +41,61 @@
 		container: document.getElementById('cy'),
 		elements: [
 		  // nodes
-		  { data: { id: 'TEOLOGIA, STORIA DELLA CHIESA E DELLE RELIGIONI (1000)' } },
+		  { data: { id: 'TEOLOGIA, \nSTORIA DELLA CHIESA\nE DELLE RELIGIONI (1000)' } },
 		  { data: { id: 'Agiografia (320)' } },
-		  { data: { id: 'Bibliografia generale (58)' } },
-		  { data: { id: 'Dizionari, enciclopedie e repertori (42)' } },
+		  { data: { id: 'Bibliografia \ngenerale (58)' } },
+		  { data: { id: 'Dizionari,\nenciclopedie\n e repertori (42)' } },
 		  { data: { id: 'Mariologia (80)' } },
 		  { data: { id: 'Sacra Scrittura (250)' } },
-		  { data: { id: 'Patrologia e letteratura cristiana antica (250)' } },
+		  { data: { id: 'Patrologia \ne letteratura \ncristiana antica (250)' } },
 
-		  { data: { id: 'storia del popolo ebreo e dei tempi dell’Antico e del Nuovo Testamento' } },
+		  { data: { id: 'storia del popolo ebreo\n e dei tempi dell’Antico\n e del Nuovo Testamento' } },
 		  
 		  
 		  
 		  { data: { id: 'Bibliografia' } },
 		  { data: { id: 'bibliografia' } },
-		  { data: { id: 'dizionari, enciclopedie, repertori, manuali, cronologia, storia' } },
-		  { data: { id: 'Enciclopedie, dizionari e lessici generali' } },
-		  { data: { id: 'Antico Testamento' } },
-		  { data: { id: 'testi originali' } },
+		  { data: { id: 'dizionari, enciclopedie,\nrepertori,\nmanuali,\ncronologia,\nstoria' } },
+		  { data: { id: 'Enciclopedie, dizionari\n e lessici generali' } },
+		  { data: { id: 'Antico Testamento (70)' } },
+		  { data: { id: 'testi originali (18)' } },
 		  { data: { id: 'versioni greche' } },
 		  { data: { id: 'versioni latine' } },
 		  { data: { id: 'versioni aramaiche (Targumin)' } },
 
 		  { data: { id: 'FILOSOFIA (570)' } },
+		  { data: { id: '(Persona: Autore)\nMozzarelli, Cesare\n(4 documenti)' } },
+		  { data: { id:  'Elenco Titoli in questo argomento' } },
+		  { data: { id:  'Elenco dei co-autori di\nMozzarelli, Cesare\n\n(19 co-autori)' } },
+		 
 		  
 
 		  // edges
 		  {
 		    data: {
 		      id: 'ab',
-		      source: 'TEOLOGIA, STORIA DELLA CHIESA E DELLE RELIGIONI (1000)',
-		      target: 'Bibliografia generale (58)'
+		      source: 'TEOLOGIA, \nSTORIA DELLA CHIESA\nE DELLE RELIGIONI (1000)',
+		      target: 'Bibliografia \ngenerale (58)'
 		    }
 		  },
 		  {
 		    data: {
 		      id: 'ac',
-		      source: 'TEOLOGIA, STORIA DELLA CHIESA E DELLE RELIGIONI (1000)',
-		      target: 'Dizionari, enciclopedie e repertori (42)'
+		      source: 'TEOLOGIA, \nSTORIA DELLA CHIESA\nE DELLE RELIGIONI (1000)',
+		      target: 'Dizionari,\nenciclopedie\n e repertori (42)'
 		    }
 		  },
 		  {
 		    data: {
 		      id: 'ad',
-		      source: 'TEOLOGIA, STORIA DELLA CHIESA E DELLE RELIGIONI (1000)',
-		      target: 'Patrologia e letteratura cristiana antica (250)' 
+		      source: 'TEOLOGIA, \nSTORIA DELLA CHIESA\nE DELLE RELIGIONI (1000)',
+		      target: 'Patrologia \ne letteratura \ncristiana antica (250)' 
 		    }
 		  },
 		  {
 		    data: {
 		      id: 'ae',
-		      source: 'TEOLOGIA, STORIA DELLA CHIESA E DELLE RELIGIONI (1000)',
+		      source: 'TEOLOGIA, \nSTORIA DELLA CHIESA\nE DELLE RELIGIONI (1000)',
 		      target: 'Sacra Scrittura (250)'
 		    }
 		  },
@@ -105,62 +110,62 @@
 		  data: {
 		      id: 'aea1',
 		      source: 'Sacra Scrittura (250)',
-		      target: 'dizionari, enciclopedie, repertori, manuali, cronologia, storia'
+		      target: 'dizionari, enciclopedie,\nrepertori,\nmanuali,\ncronologia,\nstoria'
 		    }
 		  },
 		  {
 		  data: {
 		      id: 'aea2',
 		      source: 'Sacra Scrittura (250)',
-		      target: 'storia del popolo ebreo e dei tempi dell’Antico e del Nuovo Testamento'
+		      target: 'storia del popolo ebreo\n e dei tempi dell’Antico\n e del Nuovo Testamento'
 		    }
 		  },
 		  {
 		  data: {
 		      id: 'aea3',
 		      source: 'Sacra Scrittura (250)',
-		      target: 'Antico Testamento'
+		      target: 'Antico Testamento (70)'
 		    }
 		  },
 		   {
 		  data: {
 		      id: 'aea4',
-		      source: 'Antico Testamento',
-		      target: 'testi originali'
+		      source: 'Antico Testamento (70)',
+		      target: 'testi originali (18)'
 		    }
 		  },
 		  {
 		  	data: {
 		      id: 'aea5',
-		      source: 'Antico Testamento',
+		      source: 'Antico Testamento (70)',
 		      target: 'versioni greche'
 		    }
 		  },
 		  {
 		  	data: {
 		      id: 'aea6',
-		      source: 'Antico Testamento',
+		      source: 'Antico Testamento (70)',
 		      target: 'versioni latine'
 		    }
 		  },
 		  {
 		  	data: {
 		      id: 'aea7',
-		      source: 'Antico Testamento',
+		      source: 'Antico Testamento (70)',
 		      target: 'versioni aramaiche (Targumin)'
 		    }
 		  },
 		  {
 		    data: {
 		      id: 'af',
-		      source: 'TEOLOGIA, STORIA DELLA CHIESA E DELLE RELIGIONI (1000)',
+		      source: 'TEOLOGIA, \nSTORIA DELLA CHIESA\nE DELLE RELIGIONI (1000)',
 		      target: 'Mariologia (80)'
 		    }
 		  },
 		  {
 		    data: {
 		      id: 'ag',
-		      source: 'TEOLOGIA, STORIA DELLA CHIESA E DELLE RELIGIONI (1000)',
+		      source: 'TEOLOGIA, \nSTORIA DELLA CHIESA\nE DELLE RELIGIONI (1000)',
 		      target: 'Agiografia (320)'
 		    }
 		  },
@@ -175,7 +180,28 @@
 		    data: {
 		      id: 'bb',
 		      source: 'FILOSOFIA (570)',
-		      target: 'Enciclopedie, dizionari e lessici generali'
+		      target: 'Enciclopedie, dizionari\n e lessici generali'
+		    }
+		  },
+		  {
+		    data: {
+		      id: 'aea8',
+		      source: 'testi originali (18)',
+		      target: '(Persona: Autore)\nMozzarelli, Cesare\n(4 documenti)'
+		    }
+		  },
+		  {
+		    data: {
+		      id: 'aea8b',
+		      source: '(Persona: Autore)\nMozzarelli, Cesare\n(4 documenti)',
+		      target: 'Elenco dei co-autori di\nMozzarelli, Cesare\n\n(19 co-autori)'
+		    }
+		  },
+		  {
+		    data: {
+		      id: 'aea9',
+		      source: 'testi originali (18)',
+		      target: 'Elenco Titoli in questo argomento'
 		    }
 		  },
 		  
@@ -186,12 +212,13 @@
             selector: 'node',
             style: {
                 //'shape': 'hexagon',
-                'height':50,
-                'width':50,
+                'text-wrap':'wrap',
+                'height':80,
+                'width':80,
                 'background-color': '#448aff',
                 'label': 'data(id)',
                 'text-opacity':0.6,
-                'font-size':20,
+                'font-size':28,
                 'background-image': './imgs/book_icon.png',
                //'background-fit': 'contain',
                "background-fit": "cover cover",
@@ -217,7 +244,7 @@
   padding: 30, // padding on fit
   circle: false, // put depths in concentric circles if true, put depths top down if false
   grid: false, // whether to create an even grid into which the DAG is placed (circle:false only)
-  spacingFactor: 1.75, // positive spacing factor, larger => more space between nodes (N.B. n/a if causes overlap)
+  spacingFactor: 2.5, // positive spacing factor, larger => more space between nodes (N.B. n/a if causes overlap)
   boundingBox: undefined, // constrain layout bounds; { x1, y1, x2, y2 } or { x1, y1, w, h }
   avoidOverlap: true, // prevents node overlap, may overflow boundingBox if not enough space
   nodeDimensionsIncludeLabels: false, // Excludes the label when calculating node bounding boxes for the layout algorithm
