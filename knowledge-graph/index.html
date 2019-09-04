@@ -66,10 +66,10 @@
 		  { data: { id: 'versioni aramaiche (Targumin)' } },
 
 		  { data: { id: 'FILOSOFIA (570)' } },
-		  { data: { id: '(Persona: Autore)\nMozzarelli, Cesare\n(4 documenti)'},
+		  { data: { id: '(Persona:Autore)\nMozzarelli, Cesare\n(4 documenti)'},
 		  classes: 'author'},
 		  { data: { id:  'Elenco Titoli in questo argomento' } },
-		  { data: { id:  'Elenco dei co-autori di\nMozzarelli, Cesare\n\n(19 co-autori)' } },
+		  { data: { id:  '(Persona:Autore)\nElenco dei co-autori di\nMozzarelli, Cesare\n(19 co-autori)' }, classes: 'author' },
 		 
 		  ],
 
@@ -191,14 +191,14 @@
 		    data: {
 		      id: 'aea8',
 		      source: 'testi originali (18)',
-		      target: '(Persona: Autore)\nMozzarelli, Cesare\n(4 documenti)'
+		      target: '(Persona:Autore)\nMozzarelli, Cesare\n(4 documenti)'
 		    }
 		  },
 		  {
 		    data: {
 		      id: 'aea8b',
-		      source: '(Persona: Autore)\nMozzarelli, Cesare\n(4 documenti)',
-		      target: 'Elenco dei co-autori di\nMozzarelli, Cesare\n\n(19 co-autori)'
+		      source: '(Persona:Autore)\nMozzarelli, Cesare\n(4 documenti)',
+		      target: '(Persona:Autore)\nElenco dei co-autori di\nMozzarelli, Cesare\n(19 co-autori)'
 		    }
 		  },
 		  {
@@ -227,8 +227,10 @@
                 'border-width':6,
                 'border-style':'solid',
                 'background-image': './imgs/book_icon.png',
-               //'background-fit': 'contain',
-               "background-fit": "cover cover",
+               'background-fit': 'contain',
+               'background-height':'80%',
+               'background-width':'80%',
+               //"background-fit": "cover cover",
                "background-image-opacity": 0.8
                 
             }
@@ -236,7 +238,7 @@
         {
             selector: '.author',
             style: {
-                'shape': 'hexagon',
+                'shape': 'round-rectangle',
                 'text-wrap':'wrap',
                 'height':100,
                 'width':100,
