@@ -1,0 +1,258 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Tutorial 1: Getting Started</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <!-- <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script> -->
+    <!-- <script src="jquery-3.4.1.min.js"></script> -->
+    <script src="cytoscape.min.js"></script>
+</head>
+
+<style>
+    #cy {
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    body {
+    	font-family: Helvetica Neue, Verdana, Arial,sans-serif;
+    }
+</style>
+
+<!-- ************************************************ -->
+
+<body>
+	<div>
+		<h3 style="text-align: center;font-family: Helvetica Neue;opacity: 0.5;">Prova</h3>
+	</div>
+	
+	<!-- container -->
+    <div id="cy"></div>
+
+    <script>
+
+	var cy = cytoscape({
+		container: document.getElementById('cy'),
+		elements: [
+		  // nodes
+		  { data: { id: 'TEOLOGIA, STORIA DELLA CHIESA E DELLE RELIGIONI (1000)' } },
+		  { data: { id: 'Agiografia (320)' } },
+		  { data: { id: 'Bibliografia generale (58)' } },
+		  { data: { id: 'Dizionari, enciclopedie e repertori (42)' } },
+		  { data: { id: 'Mariologia (80)' } },
+		  { data: { id: 'Sacra Scrittura (250)' } },
+		  { data: { id: 'Patrologia e letteratura cristiana antica (250)' } },
+
+		  { data: { id: 'storia del popolo ebreo e dei tempi dell’Antico e del Nuovo Testamento' } },
+		  
+		  
+		  
+		  { data: { id: 'Bibliografia' } },
+		  { data: { id: 'bibliografia' } },
+		  { data: { id: 'dizionari, enciclopedie, repertori, manuali, cronologia, storia' } },
+		  { data: { id: 'Enciclopedie, dizionari e lessici generali' } },
+		  { data: { id: 'Antico Testamento' } },
+		  { data: { id: 'testi originali' } },
+		  { data: { id: 'versioni greche' } },
+		  { data: { id: 'versioni latine' } },
+		  { data: { id: 'versioni aramaiche (Targumin)' } },
+
+		  { data: { id: 'FILOSOFIA (570)' } },
+		  
+
+		  // edges
+		  {
+		    data: {
+		      id: 'ab',
+		      source: 'TEOLOGIA, STORIA DELLA CHIESA E DELLE RELIGIONI (1000)',
+		      target: 'Bibliografia generale (58)'
+		    }
+		  },
+		  {
+		    data: {
+		      id: 'ac',
+		      source: 'TEOLOGIA, STORIA DELLA CHIESA E DELLE RELIGIONI (1000)',
+		      target: 'Dizionari, enciclopedie e repertori (42)'
+		    }
+		  },
+		  {
+		    data: {
+		      id: 'ad',
+		      source: 'TEOLOGIA, STORIA DELLA CHIESA E DELLE RELIGIONI (1000)',
+		      target: 'Patrologia e letteratura cristiana antica (250)' 
+		    }
+		  },
+		  {
+		    data: {
+		      id: 'ae',
+		      source: 'TEOLOGIA, STORIA DELLA CHIESA E DELLE RELIGIONI (1000)',
+		      target: 'Sacra Scrittura (250)'
+		    }
+		  },
+		  {
+		    data: {
+		      id: 'aea',
+		      source: 'Sacra Scrittura (250)',
+		      target: 'bibliografia'
+		    }
+		  },
+		  {
+		  data: {
+		      id: 'aea1',
+		      source: 'Sacra Scrittura (250)',
+		      target: 'dizionari, enciclopedie, repertori, manuali, cronologia, storia'
+		    }
+		  },
+		  {
+		  data: {
+		      id: 'aea2',
+		      source: 'Sacra Scrittura (250)',
+		      target: 'storia del popolo ebreo e dei tempi dell’Antico e del Nuovo Testamento'
+		    }
+		  },
+		  {
+		  data: {
+		      id: 'aea3',
+		      source: 'Sacra Scrittura (250)',
+		      target: 'Antico Testamento'
+		    }
+		  },
+		   {
+		  data: {
+		      id: 'aea4',
+		      source: 'Antico Testamento',
+		      target: 'testi originali'
+		    }
+		  },
+		  {
+		  	data: {
+		      id: 'aea5',
+		      source: 'Antico Testamento',
+		      target: 'versioni greche'
+		    }
+		  },
+		  {
+		  	data: {
+		      id: 'aea6',
+		      source: 'Antico Testamento',
+		      target: 'versioni latine'
+		    }
+		  },
+		  {
+		  	data: {
+		      id: 'aea7',
+		      source: 'Antico Testamento',
+		      target: 'versioni aramaiche (Targumin)'
+		    }
+		  },
+		  {
+		    data: {
+		      id: 'af',
+		      source: 'TEOLOGIA, STORIA DELLA CHIESA E DELLE RELIGIONI (1000)',
+		      target: 'Mariologia (80)'
+		    }
+		  },
+		  {
+		    data: {
+		      id: 'ag',
+		      source: 'TEOLOGIA, STORIA DELLA CHIESA E DELLE RELIGIONI (1000)',
+		      target: 'Agiografia (320)'
+		    }
+		  },
+		  {
+		    data: {
+		      id: 'ba',
+		      source: 'FILOSOFIA (570)',
+		      target: 'Bibliografia'
+		    }
+		  },
+		  {
+		    data: {
+		      id: 'bb',
+		      source: 'FILOSOFIA (570)',
+		      target: 'Enciclopedie, dizionari e lessici generali'
+		    }
+		  },
+		  
+		],
+		
+    style: [
+        {
+            selector: 'node',
+            style: {
+                //'shape': 'hexagon',
+                'background-color': '#448aff',
+                'label': 'data(id)',
+                'text-opacity':0.6,
+                'font-size':20,
+                'background-image': './imgs/book_icon.png',
+               //'background-fit': 'contain',
+               'background-width-relative-to': 'inner',
+       'background-height-relative-to': 'inner',
+       'background-width': '20px',
+       'background-height': '20px',
+       'background-clip': 'node',
+               'background-width':'50%'
+                
+            }
+        },
+{
+      selector: 'edge',
+      style: {
+        'width': 3,
+        'line-color': '#ccc',
+        'target-arrow-color': '#ccc',
+        'target-arrow-shape': 'triangle',
+        'curve-style': 'unbundled-bezier',
+        'width':'4'
+      }
+    }
+        ],
+      layout: { name: 'breadthfirst',
+  fit: true, // whether to fit the viewport to the graph
+  directed: false, // whether the tree is directed downwards (or edges can point in any direction if false)
+  padding: 30, // padding on fit
+  circle: false, // put depths in concentric circles if true, put depths top down if false
+  grid: false, // whether to create an even grid into which the DAG is placed (circle:false only)
+  spacingFactor: 1.75, // positive spacing factor, larger => more space between nodes (N.B. n/a if causes overlap)
+  boundingBox: undefined, // constrain layout bounds; { x1, y1, x2, y2 } or { x1, y1, w, h }
+  avoidOverlap: true, // prevents node overlap, may overflow boundingBox if not enough space
+  nodeDimensionsIncludeLabels: false, // Excludes the label when calculating node bounding boxes for the layout algorithm
+  roots: undefined, // the roots of the trees
+  maximal: false, // whether to shift nodes down their natural BFS depths in order to avoid upwards edges (DAGS only)
+  animate: false, // whether to transition the node positions
+  animationDuration: 500, // duration of animation in ms if enabled
+  animationEasing: undefined, // easing of animation if enabled,
+  animateFilter: function ( node, i ){ return true; }, // a function that determines whether the node should be animated.  All nodes animated by default on animate enabled.  Non-animated nodes are positioned immediately when the layout starts
+  ready: undefined, // callback on layoutready
+  stop: undefined, // callback on layoutstop
+  transform: function (node, position ){ return position; } // transform a given node position. Useful for changing flow direction in discrete layouts},
+}
+	
+	});
+
+
+// https://stackoverflow.com/questions/41506664/hide-and-show-child-nodes-on-node-tap-cytoscape
+cy.on('tap', 'node', function() {
+    if (this.scratch().restData == null) {
+       // Save node data and remove
+       this.scratch({
+            restData: this.successors().targets().remove()
+       });
+    } else {
+       // Restore the removed nodes from saved data
+       this.scratch().restData.restore();
+       this.scratch({
+            restData: null
+       });
+    }
+});
+
+    </script>
+</body>
+</html>
